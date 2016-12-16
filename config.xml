@@ -26,6 +26,8 @@
 	
 	<preference name="orientation" value="portrait" />
 	<splash src="splash.png" width="600" height="418"/>
+	<preference name="SplashMaintainAspectRatio" value="true" />
+	<preference name="SplashScreenBackgroundColor" value="white" />
 	
 	<icon src="icon.png" />
 	

@@ -1928,6 +1928,10 @@ body {
   height: 100px;
   background: #CC3333; }
 
+@media (max-width: 480px) {
+  .header-menu {
+    height: 80px; } }
+
 .header-logo {
   padding: 40px 0; }
 
@@ -1990,10 +1994,20 @@ body {
       -ms-flex-align: center;
           align-items: center; }
 
+@media (max-width: 480px) {
+  .header-nav-link {
+    height: 80px;
+    font-size: 14px; } }
+
 .nav-svg-icon {
   width: 35px;
   height: 35px;
   margin-bottom: 10px; }
+
+@media (max-width: 480px) {
+  .nav-svg-icon {
+    width: 20px;
+    height: 20px; } }
 
 .nav-icon-calc,
 .nav-icon-profile,
@@ -2018,6 +2032,15 @@ body {
   color: #fff;
   font-weight: 700;
   font-size: 30px; }
+
+@media (max-width: 480px) {
+  .nav-item-rezultat {
+    -webkit-flex-basis: 100px;
+        -ms-flex-preferred-size: 100px;
+            flex-basis: 100px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px; } }
 
 .footer-main {
   -webkit-box-flex: 0;
@@ -2096,18 +2119,24 @@ body {
   width: 100%;
   height: 76px; }
 
-.arrow-small-icon {
-  fill: red; }
+.content-main div {
+  margin-bottom: 40px; }
 
 .step {
   display: block;
-  width: 380px;
+  width: calc(100% - 40px);
+  max-width: 400px;
   text-align: center;
   border: 2px solid #aaa;
   margin: 0 auto;
   border-radius: 15px;
   padding: 10px;
   font-size: 18px; }
+
+@media (max-width: 480px) {
+  .step {
+    width: calc(100% - 40px);
+    font-size: 16px; } }
 
 .input-title {
   font-weight: 700;
@@ -2118,19 +2147,24 @@ body {
   padding: 10px;
   line-height: 1.25; }
 
+@media (max-width: 480px) {
+  .input-title {
+    font-size: 16px; } }
+
 .rangeslider,
 .rangeslider__fill {
   display: block;
-  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
   border-radius: 10px; }
 
 .rangeslider {
-  background: #e6e6e6;
+  background: #eee;
   position: relative; }
 
 .rangeslider--horizontal {
   height: 20px;
-  width: 100%; }
+  width: calc(100% - 40px);
+  max-width: 400px;
+  margin: 30px auto; }
 
 .rangeslider--vertical {
   width: 20px;
@@ -2165,7 +2199,6 @@ body {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   border-radius: 50%; }
 
 .rangeslider__handle:after {
@@ -2203,6 +2236,3 @@ body {
   left: -10px;
   touch-action: pan-x;
   -ms-touch-action: pan-x; }
-
-input[type="range"]:focus + .rangeslider .rangeslider__handle {
-  box-shadow: 0 0 8px rgba(255, 0, 255, 0.9); }
