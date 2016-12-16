@@ -84,7 +84,7 @@
 		-->
 	</header>
 
-	<main class="content-main">
+	<main class="content-main" style="display: none;">
 
 		<div><h3 class="input-title">Rizik nastanka hipoglikemije ili drugih nuspojava</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="1" value="1" min="1" max="3" step="0.1"></div>
 		<div><h3 class="input-title">Trajanje bolesti (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="2" value="1" min="1" max="3" step="0.02"></div>
@@ -93,8 +93,49 @@
 		<div><h3 class="input-title">Postojanje vaskularnih komplikacija</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="5" value="1" min="1" max="3" step="0.1"></div>
 		<div><h3 class="input-title">Psihičko, socijalno i fizičko stanje bolesnika</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="6" value="1" min="1" max="3" step="0.1"></div>
 		<div><h3 class="input-title">Podrška zdravstvenog sustava/obitelji/zajednice</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="7" value="1" min="1" max="3" step="0.1"></div>
+
+
+		<div class="info-tab">
+			Ova znanstvena aplikacija izračunava ciljanu vrijednost HbA1c pacijenta na temelju ovih 7 parametara:
+		</div>
 		
 	</main>
+
+	<!-- Obavezno koristiti DISPLAY FLEX jer block ce resetirat flex i UJEBAT TI LAJOUT !!! -->
+	<main class="content-main content-info" style="display: flex;">
+		
+		<div class="info-centering">
+
+			<h3 class="info-title">Ova znanstvena aplikacija izračunava ciljanu vrijednost HbA1c pacijenta na temelju ovih 7 parametara: </h3>
+
+			<ul class="info-lista">
+				<li>Rizici nastajanja hipoglikemije i drugih nuspojava</li>
+				<li>Trajanje bolesti (godine)</li>
+				<li>Dob bolesnika</li>
+				<li>Postojanje drugih komorbiditeta</li>
+				<li>Postojanje vaskularnih komplikacija</li>
+				<li>Psihičko, socijalno i fizičko stanje bolesnika</li>
+				<li>Podrška zdravstvenog sustava / obitelji / zajednice</li>
+			</ul>
+
+			<h3 class="info-title">Ovaj izračun se temelji prema: </h3>
+
+			<h4 class="info-small-title">Hrvatskim smjernicama za farmakološko liječenje šećerne bolesti tipa 2</h4>
+			<p class="info-tekst">Dario Rahelić, Liječnički Vjensik 2016; Godište 138, S1-S21.</p>
+
+			<h4 class="info-small-title">Smjernicama Američke udruge za dijabetes (ADA)</h4>
+			<p>Silvio E. Inzucchi, Glycemic Targets. Diabetes Care Volume 39, Supplement 1, January 2016: S39-S46.</p>
+
+			<h4 class="info-small-title">radu Avivit Cahna i suradnika</h4>
+			<p class="info-tekst">Avivit Cahn, Clinical Assessment of Individualized Glycemic Goals in Patients With Type 2 Diabetes:</p>
+			<p class="info-tekst">Formulation of an Algorithm Based on a Survey Among Leading</p>
+			<p class="info-tekst">Worldwide Diabetologists. Diabetes Care Publish Ahead of Print,published online October 30, 2015.</p>
+
+			<img class="info-logo img-centered img-responsive" src="images/takeda.png" alt="Takeda logo">
+		</div>
+
+	</main>
+
 
 	<footer class="footer-main">
 		<p class="footer-copyright-text">&copy; Takeda 2016.</p>
