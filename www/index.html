@@ -85,7 +85,7 @@
 		-->
 	</header>
 
-	<main class="content-main kalkulator1" style="display: none;">
+	<main class="content-main kalkulator1" style="display: block;">
 
 		<div><h3 class="input-title">Rizik nastanka hipoglikemije ili drugih nuspojava</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="1" value="1" min="1" max="3" step="0.1"></div>
 		<div><h3 class="input-title">Trajanje bolesti (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="2" value="1" min="1" max="3" step="0.02"></div>
@@ -101,7 +101,7 @@
 	</main>
 
 	<!-- Obavezno koristiti DISPLAY FLEX jer block ce resetirat flex i UJEBAT TI LAJOUT !!! -->
-	<main class="content-main content-info" style="display: flex;">
+	<main class="content-main content-info" style="display: none;">
 		
 		<div class="info-centering">
 
@@ -214,15 +214,13 @@ $(function(){
 
 	
 
-	$('.content-info').hide();
-	$('.kalkulator1').show();
 
-	$('.lin1').on("pointerup", function(event) {
-	  $('.content-info').hide();
+	$('.lin1').on("pointerdown", function(event) {
+	  $('.content-info').css('display', 'flex');
 	  $('.kalkulator1').show();
 	});
-	$('.lin3').on("pointerup", function(event) {
-	  $('.content-info').show();
+	$('.lin3').on("pointerdown", function(event) {
+	  $('.content-info').show('display', 'none');
 	  $('.kalkulator1').hide();
 	});
 
