@@ -23,6 +23,7 @@
 	<plugin name="cordova-plugin-splashscreen" source="npm" />
 	
 	<platform name="android" />
+	<platform name="ios" />
 	
 	<preference name="orientation" value="portrait" />
 	<splash src="splash.png" width="600" height="418"/>
