@@ -18,13 +18,15 @@
 	
 	
 	
-	<platform name="android" />
-	<platform name="ios" />
+	<platform name="android"><icon src="icon.png" /></platform>
+	<platform name="ios">
+		<icon src="icon.png" width="180" height="180" />
+	</platform>
 	
 	<preference name="orientation" value="portrait" />
 
 	
-	<icon src="icon.png" />
+	
 	
 	<preference name="android-build-tool" value="gradle" />
 	
