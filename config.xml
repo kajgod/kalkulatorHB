@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.dedal.emedikusApp"
+        id          = "com.dedal.takedaHbA1c"
         version     = "0.0.1" >
 		
 		
 
-    <name>INteractive</name>
+    <name>HbA1c kalkulator</name>
 
     <description>
-      Aplikacija za liječnike
+      HbA1c kalkulator by Takeda
     </description>
 
     <author href="https://dedal.hr" email="info@dedal.hr">
@@ -20,36 +20,15 @@
 	<allow-navigation href="*" />
 	<allow-intent href="*" />
 	<access origin="*" />
-	<plugin name="cordova-plugin-insomnia" source="npm" />	
-	<plugin name="cordova-plugin-file" source="npm" />	
-	<plugin name="cordova-plugin-file-transfer" source="npm" />	
-	<plugin name="cordova-plugin-inappbrowser" source="npm" />
-	<plugin name="cordova-plugin-background-mode" source="npm" />
-	<plugin name="cordova-plugin-keyboard" source="npm" />	
-	<plugin name="cordova-plugin-camera" source="npm" />	
-	<plugin name="cordova-plugin-battery-status" source="npm" />		
-	<plugin name="cordova-plugin-geolocation" source="npm" />		
-	<plugin name="cordova-plugin-vibration" source="npm" />		
-	<plugin name="cordova-plugin-media" source="npm" />		
-	<plugin name="cordova-plugin-fileopener" source="npm" />
-	<plugin name="cordova-plugin-fullscreen" source="npm" />		
-	<plugin spec="https://github.com/kitolog/cordova-plugin-screen-locker.git" source="git" />
-	<plugin spec="https://github.com/manusimpson/Phonegap-Android-VolumeControl.git" source="git" />
+	<plugin name="cordova-plugin-splashscreen" source="npm" />
 	
 	<platform name="android" />
 	
-	<preference name="orientation" value="landscape" />
-	<preference name="SplashScreen" value="none"/>
+	<preference name="orientation" value="portrait" />
+	<splash src="splash.png" width="600" height="418"/>
 	
-	<icon src="icon.png" />
+	<icon src="splash.png" />
 	
-	<meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' />
-	<preference name="AllowInlineMediaPlayback" value="true"/>
-	<preference name="KeyboardDisplayRequiresUserAction" value="false"/>
-	<preference name="Fullscreen" value="true" />
-	<preference name="DisallowOverscroll" value="true"/>
-	<preference name="BackgroundColor" value="0xffffffff"/>
-	<preference name="HideKeyboardFormAccessoryBar" value="true"/>
 	<preference name="android-build-tool" value="gradle" />
 	
 	
