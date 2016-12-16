@@ -21,6 +21,7 @@
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/rangeslider.js"></script>
+	<script type="text/javascript" src="js/pep.js"></script>
 
 </head>
 <body>
@@ -31,7 +32,7 @@
 		<nav class="header-menu">
 			<ul class="header-nav">
 				<li class="header-nav-item">
-					<a class="header-nav-link" href="#">
+					<a class="header-nav-link lin1" href="#">
 						
 						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
@@ -49,7 +50,7 @@
 					</a>
 				</li>
 				<li class="header-nav-item">
-					<a class="header-nav-link" href="#">
+					<a class="header-nav-link lin2" href="#">
 					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
 					<path class="nav-icon-profile" d="M622.8,4.4C624-2.6,625-9.7,625-17v-96c0-70.7-57.3-128-128-128s-128,57.3-128,128v96c0,7.3,1,14.4,2.2,21.4
@@ -62,7 +63,7 @@
 				</li>
 
 				<li class="header-nav-item">
-					<a class="header-nav-link" href="#">
+					<a class="header-nav-link lin3" href="#">
 					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 							 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
 						<path class="nav-icon-info" d="M497-241c141.4,0,256,114.6,256,256c0,141.4-114.6,256-256,256S241,156.4,241,15C241-126.4,355.6-241,497-241z M497,207
@@ -84,7 +85,7 @@
 		-->
 	</header>
 
-	<main class="content-main" style="display: none;">
+	<main class="content-main kalkulator1" style="display: none;">
 
 		<div><h3 class="input-title">Rizik nastanka hipoglikemije ili drugih nuspojava</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="1" value="1" min="1" max="3" step="0.1"></div>
 		<div><h3 class="input-title">Trajanje bolesti (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="2" value="1" min="1" max="3" step="0.02"></div>
@@ -95,9 +96,7 @@
 		<div><h3 class="input-title">Podrška zdravstvenog sustava/obitelji/zajednice</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="7" value="1" min="1" max="3" step="0.1"></div>
 
 
-		<div class="info-tab">
-			Ova znanstvena aplikacija izračunava ciljanu vrijednost HbA1c pacijenta na temelju ovih 7 parametara:
-		</div>
+		
 		
 	</main>
 
@@ -214,6 +213,18 @@ $(function(){
 	for(x=1;x<8;x++)ispis(x,1);
 
 	
+
+	$('.content-info').hide();
+	$('.kalkulator1').show();
+
+	$('.lin1').on("pointerup", function(event) {
+	  $('.content-info').hide();
+	  $('.kalkulator1').show();
+	});
+	$('.lin3').on("pointerup", function(event) {
+	  $('.content-info').show();
+	  $('.kalkulator1').hide();
+	});
 
 });
 

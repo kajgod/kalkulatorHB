@@ -16,7 +16,7 @@
         Jurica Starešinčić
     </author>
 	
-	
+	<content src="index.html" />
 	
 	<platform name="android"><icon src="icon.png" /></platform>
 	<platform name="ios">
