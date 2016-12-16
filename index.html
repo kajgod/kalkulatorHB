@@ -1,0 +1,208 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>Takeda HbA1c kalkulator</title>
+	<meta name="description" content="Takeda HbA1c kalkulator">
+	<meta name="author" content="Dedal">
+
+
+	<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<link rel="stylesheet" href="css/style.css?v=2.0">
+
+	<link rel="manifest" href="manifest.json">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/rangeslider.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+	<header class="header-main">
+		<nav class="header-menu">
+			<ul class="header-nav">
+				<li class="header-nav-item">
+					<a class="header-nav-link" href="#">
+						
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
+						<g>
+							<g>
+								<path class="nav-icon-calc" d="M689-241H305c-17.7,0-32,14.3-32,32v448c0,17.7,14.3,32,32,32h384c17.7,0,32-14.3,32-32v-448C721-226.7,706.7-241,689-241
+									z M401,207h-64v-64h64V207z M401,111h-64V47h64V111z M401,15h-64v-64h64V15z M529,207h-64v-64h64V207z M529,111h-64V47h64V111z
+									 M529,15h-64v-64h64V15z M657,207h-64v-64h64V207z M657,111h-64V47h64V111z M657,15h-64v-64h64V15z M657-113H337v-64h320V-113z"/>
+							</g>
+						</g>
+						</svg>
+
+
+						Kalkulator
+					</a>
+				</li>
+				<li class="header-nav-item">
+					<a class="header-nav-link" href="#">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
+					<path class="nav-icon-profile" d="M622.8,4.4C624-2.6,625-9.7,625-17v-96c0-70.7-57.3-128-128-128s-128,57.3-128,128v96c0,7.3,1,14.4,2.2,21.4
+						C293.7,31.9,241,83.4,241,143v96c0,17.7,14.3,32,32,32h448c17.7,0,32-14.3,32-32v-96C753,83.4,700.3,31.9,622.8,4.4z M433-113
+						c0-35.3,28.7-64,64-64c35.3,0,64,28.7,64,64v96c0,35.3-28.7,64-64,64c-35.3,0-64-28.7-64-64V-113z M689,207H305v-64
+						c0-34.6,36.8-64.6,91.6-81.5C420,91.4,456.1,111,497,111s77-19.6,100.4-49.5C652.2,78.4,689,108.4,689,143V207z"/>
+					</svg>
+
+					Profil</a>
+				</li>
+
+				<li class="header-nav-item">
+					<a class="header-nav-link" href="#">
+					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+							 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
+						<path class="nav-icon-info" d="M497-241c141.4,0,256,114.6,256,256c0,141.4-114.6,256-256,256S241,156.4,241,15C241-126.4,355.6-241,497-241z M497,207
+							c106,0,192-86,192-192s-86-192-192-192c-106,0-192,86-192,192S391,207,497,207z M529-49h-64v-64h64V-49z M529,143h-64V-17h64V143z"
+							/>
+						</svg>
+					Info</a>
+				</li>
+				<li class="header-nav-item nav-item-rezultat"><span class="reza">6.00</span></li>
+			</ul>
+
+			
+
+		</nav>
+		<!--
+		<div class="header-logo">
+			<img class="header-logo-image" src="images/logo.png" alt="Logo">
+		</div>
+		-->
+	</header>
+
+	<main class="content-main">
+
+		<div><h3 class="input-title">Rizik nastanka hipoglikemije ili drugih nuspojava</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="1" value="1" min="1" max="3" step="0.1"></div>
+		<div><h3 class="input-title">Trajanje bolesti (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="2" value="1" min="1" max="3" step="0.02"></div>
+		<div><h3 class="input-title">Dob bolesnika (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="3" value="1" min="1" max="3" step="0.0333333333"></div>
+		<div><h3 class="input-title">Postojanje drugih komorbiditeta</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="4" value="1" min="1" max="3" step="0.1"></div>
+		<div><h3 class="input-title">Postojanje vaskularnih komplikacija</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="5" value="1" min="1" max="3" step="0.1"></div>
+		<div><h3 class="input-title">Psihičko, socijalno i fizičko stanje bolesnika</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="6" value="1" min="1" max="3" step="0.1"></div>
+		<div><h3 class="input-title">Podrška zdravstvenog sustava/obitelji/zajednice</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="7" value="1" min="1" max="3" step="0.1"></div>
+		
+	</main>
+
+	<footer class="footer-main">
+		<p class="footer-copyright-text">&copy; Takeda 2016.</p>
+	</footer>
+</div>
+
+<script>
+/* varijable */
+
+var faktori=[0, 22.5, 7.6, 20.5, 13.3, 22.3, 7.9, 5.9];
+
+/* izračun */
+
+function izracun(){
+	var rezultata;
+	var suma=0;
+	$('.minjac').each(function(key){
+		var ajdi=key+1;
+		var vrijed=$(this).val();
+		suma=suma +vrijed*faktori[ajdi];
+		ispis(ajdi, vrijed);
+	});
+
+	rezultata=parseFloat(Math.round(100*(6+(suma-100)/100))/100).toFixed(2);
+
+	$('.reza').html(rezultata); 
+}
+
+/* ispisivanje tamo nekamo */
+
+function ispis(id, val){
+	switch(id){
+		case 1:
+			var pp=['','nizak','umjeren','visok'];
+			var indeks=2;
+			if(val<1.7)indeks=1;
+			if(val>2.5)indeks=3;
+			$('.step:eq(0)').html(pp[indeks]);
+		break;
+		case 2:
+			$('.step:eq(1)').html(Math.round(15*(val-1)/2+5));
+		break;
+		case 3:
+			$('.step:eq(2)').html(Math.round(60*(val-1)/2+20));
+		break;
+		case 4:
+			var pp=['','ne postoje','nekoliko ili umjereni','multipli ili ozbiljni'];
+			var indeks=2;
+			if(val<1.7)indeks=1;
+			if(val>2.5)indeks=3;
+			$('.step:eq(3)').html(pp[indeks]);
+		break;
+		case 5:
+			var pp=['','ne postoje','rane','uznapredovale'];
+			var indeks=2;
+			if(val<1.7)indeks=1;
+			if(val>2.5)indeks=3;
+			$('.step:eq(4)').html(pp[indeks]);
+		break;
+		case 6:
+			var pp=['','visokomotivirani, suradljivi, samostalni','niskomotivirani, nesuradljivi, ovisni o pomoći drugih'];
+			var indeks=1;
+			if(val>2)indeks=2;
+			$('.step:eq(5)').html(pp[indeks]);
+		break;
+		case 7:
+			var pp=['','sveobuhvatna','ograničena'];
+			var indeks=1;
+			if(val>2)indeks=2;
+			$('.step:eq(6)').html(pp[indeks]);
+		break;
+	}
+}
+
+$(function(){
+	for(x=1;x<8;x++)ispis(x,1);
+
+	
+
+});
+
+
+
+
+</script>
+<script type="text/javascript">
+	$(function() {
+    var $document   = $(document),
+        $inputRange = $('input[type="range"]');
+    
+  
+  
+    $inputRange.rangeslider({
+      polyfill: false 
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
