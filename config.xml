@@ -35,6 +35,8 @@
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="UIWebViewBounce" value="false" />
 	
+	<preference name="SplashScreen" value="none"/>
+	
 	
 	
 
