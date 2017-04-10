@@ -1167,10 +1167,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio tellus
 */
 
 
- 	var tekst1='<tr><td width="30%-1px" class="rcrta val-top">', tekst2='</td><td width="60%">', tekst3='</td></tr>';
+ 	var tekst1='<tr><td width="30%-1px" class="rcrta val-top" style="text-align:left;">', tekst2='</td><td width="60%" style="text-align:left;">', tekst3='</td></tr>';
  	var bopanje=function(egfrca){
  		location.hash = ''; /* ovo miče modal */
- 		tekst='<tr><td  width="30%-1px" class="bcrta rcrta" style="text-align:left;">Lijek</td><td width="60%" class="bcrta">Doziranje prilagođeno klirensu kreatinina "RJEŠENJE" ml/min</td></tr>';
+ 		tekst='<tr><td  width="30%-1px" class="bcrta rcrta" style="text-align:left;">Lijek</td><td width="60%" class="bcrta" style="text-align:left;">Doziranje prilagođeno klirensu kreatinina "RJEŠENJE" ml/min</td></tr>';
  		$.each(lijek, function(lijek, data){
  			teksta='';
  			$.each(data, function(gfr, opis){
