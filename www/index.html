@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link rel="icon" href="images/Takeda-ICON.jpg">
+	<!--<link rel="icon" href="images/Takeda-ICON.jpg"> -->
 
 	<title>Takeda kalkulator</title>
 	<meta name="description" content="Takeda HbA1c kalkulator">
@@ -628,7 +628,7 @@ $(function(){
  <!-- html reza eGFR -->
 
  <main class="content-main tablica2" style="display: block;">
- <table style="text-align:left;"></table>
+ <table style="text-align:left !important;"></table>
  </main>
 
 
@@ -1170,7 +1170,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio tellus
  	var tekst1='<tr><td width="30%-1px" class="rcrta val-top">', tekst2='</td><td width="60%">', tekst3='</td></tr>';
  	var bopanje=function(egfrca){
  		location.hash = ''; /* ovo miče modal */
- 		tekst='<tr><td  width="30%-1px" class="bcrta rcrta">Lijek</td><td width="60%" class="bcrta">Doziranje prilagođeno klirensu kreatinina "RJEŠENJE" ml/min</td></tr>';
+ 		tekst='<tr><td  width="30%-1px" class="bcrta rcrta" style="text-align:left;">Lijek</td><td width="60%" class="bcrta">Doziranje prilagođeno klirensu kreatinina "RJEŠENJE" ml/min</td></tr>';
  		$.each(lijek, function(lijek, data){
  			teksta='';
  			$.each(data, function(gfr, opis){
