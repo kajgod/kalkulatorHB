@@ -3,12 +3,24 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<link rel="icon" href="images/Takeda-ICON.jpg">
 
-	<title>Takeda HbA1c kalkulator</title>
+	<title>Takeda kalkulator</title>
 	<meta name="description" content="Takeda HbA1c kalkulator">
 	<meta name="author" content="Dedal">
 
 
+	<!-- seo meta -->
+	<!-- Open Graph data 
+<meta property="og:title" content="Takeda HbA1c kalkulator" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://dedal.hr/takeda/app/www/index.html" />
+<meta property="og:image" content="http://dedal.hr/takeda/app/www/images/takeda-seo_fb.jpg" />
+<meta property="og:description" content="Takeda HbA1c kalkulator" />
+<meta property="og:site_name" content="Takeda" /> -->
+
+
+	<link rel="stylesheet" href="css/main.css" />
 	<meta content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 	<meta name="mobile-web-app-capable" content="yes">
 
@@ -16,41 +28,81 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
 	<link rel="stylesheet" href="css/style.css?v=2.0">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+
 
 	<link rel="manifest" href="manifest.json">
-
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/rangeslider.js"></script>
 	<script type="text/javascript" src="js/pep.js"></script>
+	
+	
+
 
 </head>
 <body>
+<div class="landing">	<!-- Page Wrapper -->
+			<div id="page-wrapper">
 
-<div class="container">
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+						<div class="center"><img src="images/Logo_Takeda.svg.png" alt="Logo_Takeda"></div>
+							<ul>
+								<li><a href="#" class="button special fit razmak lin1">HbA1c kalkulator</a></li>
+								<li><a href="#" class="button special fit razmak lin2">eGFR kalkulator</a></li>
+								<!--<li><a href="#" class="button special fit">Hipoglikemija</a></li> -->
+							</ul>
+						</div>
+
+						<footer class="footer-m">
+		<p class="footer-copyright-text">&copy; Takeda 2016.</p>
+	</footer>
+					</section>
+
+				
+			</div>
+</div>
+
+<script>
+$(function(){
+	$('.landing .special').click(function(){
+		$('.landing').hide();
+		$('.container').show();
+	});
+});
+</script>
+<div class="container" style="display:none;">
 
 	<header class="header-main">
 		<nav class="header-menu">
 			<ul class="header-nav">
 				<li class="header-nav-item">
-					<a class="header-nav-link lin1" href="#">
-						
-						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-						 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
-						<g>
-							<g>
-								<path class="nav-icon-calc" d="M689-241H305c-17.7,0-32,14.3-32,32v448c0,17.7,14.3,32,32,32h384c17.7,0,32-14.3,32-32v-448C721-226.7,706.7-241,689-241
-									z M401,207h-64v-64h64V207z M401,111h-64V47h64V111z M401,15h-64v-64h64V15z M529,207h-64v-64h64V207z M529,111h-64V47h64V111z
-									 M529,15h-64v-64h64V15z M657,207h-64v-64h64V207z M657,111h-64V47h64V111z M657,15h-64v-64h64V15z M657-113H337v-64h320V-113z"/>
-							</g>
-						</g>
-						</svg>
-
-
-						<span class="nav-link-text">Kalkulator</span>
+					<a class="header-nav-link" onclick="return showOrHide('menulink')" href="#">
+						<i class="fa fa-calculator" aria-hidden="true"></i>
+						<span class="nav-link-text sakrit">Kalkulator</span>
 					</a>
+						<ul id="menulink">
+							<li class="header-nav-item crta ">
+								<a class="header-nav-link lin1" onclick="return showOrHide('menulink')" href="#">
+									<span class="nav-link-text">HbA1c kalkulator</span>
+								</a>
+							</li>
+
+							
+							<li class="header-nav-item crta">
+								<a class="header-nav-link lin2" onclick="return showOrHide('menulink')" href="#">
+									<span class="nav-link-text">eGFR kalkulator</span>
+								</a>
+							</li>
+						
+						</ul>
 				</li>
+				
+				
+				<!-- PROFIL
 				<li class="header-nav-item">
-					<a class="header-nav-link lin2" href="#">
+					<a class="header-nav-link lin4" href="#">
 					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
 					<path class="nav-icon-profile" d="M622.8,4.4C624-2.6,625-9.7,625-17v-96c0-70.7-57.3-128-128-128s-128,57.3-128,128v96c0,7.3,1,14.4,2.2,21.4
@@ -62,24 +114,39 @@
 					<span class="nav-link-text">Profil</span>
 					</a>
 				</li>
-
+				-->
+				
 				<li class="header-nav-item">
 					<a class="header-nav-link lin3" href="#">
-					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-							 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
-						<path class="nav-icon-info" d="M497-241c141.4,0,256,114.6,256,256c0,141.4-114.6,256-256,256S241,156.4,241,15C241-126.4,355.6-241,497-241z M497,207
-							c106,0,192-86,192-192s-86-192-192-192c-106,0-192,86-192,192S391,207,497,207z M529-49h-64v-64h64V-49z M529,143h-64V-17h64V143z"
-							/>
-						</svg>
-					<span class="nav-link-text">Info</span>
+						<i class="fa fa-info-circle" aria-hidden="true"></i>
+						<span class="nav-link-text sakrit">Info</span>
 					</a>
 				</li>
-				<li class="header-nav-item nav-item-rezultat"><span class="reza">6.00</span></li>
+				
+				<!--
+				<li class="header-nav-item">
+					<a class="header-nav-link lin3" href="#">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+								 viewBox="241 -241 512 512" width="35px" heigth="35px" xml:space="preserve" class="nav-svg-icon">
+							<path class="nav-icon-info" d="M497-241c141.4,0,256,114.6,256,256c0,141.4-114.6,256-256,256S241,156.4,241,15C241-126.4,355.6-241,497-241z M497,207
+								c106,0,192-86,192-192s-86-192-192-192c-106,0-192,86-192,192S391,207,497,207z M529-49h-64v-64h64V-49z M529,143h-64V-17h64V143z"
+								/>
+						</svg>
+						<span class="nav-link-text">Hipoglikemija</span>
+					</a>
+				</li>
+				-->
+
+				<li class="header-nav-item">
+					<img src="images/takeda.png" alt="takeda logo">
+				</li>
+
+				<!--GORE DESNO REZULTAT 
+				<li class="header-nav-item nav-item-rezultat"><span class="reza">6.00</span></li>-->
 			</ul>
 
-			
-
 		</nav>
+
 		<!--
 		<div class="header-logo">
 			<img class="header-logo-image" src="images/logo.png" alt="Logo">
@@ -87,61 +154,579 @@
 		-->
 	</header>
 
+
+
+<!-- hBa1c KALKULATOR -->
 	<main class="content-main kalkulator1" style="display: block;">
 
-		<div><h3 class="input-title">Rizik nastanka hipoglikemije ili drugih nuspojava</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="1" value="1" min="1" max="3" step="0.1"></div>
-		<div><h3 class="input-title">Trajanje bolesti (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="2" value="1" min="1" max="3" step="0.02"></div>
-		<div><h3 class="input-title">Dob bolesnika (godine)</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="3" value="1" min="1" max="3" step="0.0333333333"></div>
-		<div><h3 class="input-title">Postojanje drugih komorbiditeta</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="4" value="1" min="1" max="3" step="0.1"></div>
-		<div><h3 class="input-title">Postojanje vaskularnih komplikacija</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="5" value="1" min="1" max="3" step="0.1"></div>
-		<div><h3 class="input-title">Psihičko, socijalno i fizičko stanje bolesnika</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="6" value="1" min="1" max="3" step="0.1"></div>
-		<div><h3 class="input-title">Podrška zdravstvenog sustava/obitelji/zajednice</h3><span class="step"></span><input type="range" oninput="izracun()" class="minjac" data-id="7" value="1" min="1" max="3" step="0.1"></div>
+<div>
+			<h2 class="main-title hba-naslov">HbA1c kalkulator</h2>
+</div>
 
+		<div>
+			<h3 class="input-title">Rizik nastanka hipoglikemije ili drugih nuspojava</h3>
+			<span class="step skriven"></span>
+				<div class="select hb1">  
+					<select class="okvir">
+						<option value="1">nizak</option>
+						<option value="2">umjeren</option>
+						<option value="3">visok</option>
+					</select>
+				</div>
+			
+			<input type="range" oninput="izracun()" class="minjac" data-id="1" value="1" min="1" max="3" step="0.1">
+		</div>
+			<div class="scale space-mbot">
+				<div class="numbers">
+					<p>1</p>
+				</div>
+				<div class="numbers">
+					<p>2</p>
+				</div>
+				<div class="numbers">
+					<p>3</p>
+				</div>
+				<div class="numbers">
+					<p>4</p>
+				</div>
+				<div class="numbers">
+					<p>5</p>
+				</div>
+				<div class="numbers">
+					<p>6</p>
+				</div>
+				<div class="numbers">
+					<p>7</p>
+				</div>
+				<div class="numbers">
+					<p>8</p>
+				</div>
+				<div class="numbers">
+					<p>9</p>
+				</div>
+				<div class="numbers">
+					<p>10</p>
+				</div>
+			</div>
+			<div class="clear"></div>
 
 		
+
+		<div>
+			<h3 class="input-title">Trajanje bolesti (godine)</h3>
+				<span class="step skriven"></span>
+				<input class="okvir hb2" type="number" name="godine" value="5" min="5" max="20" placeholder="">
+				<input type="range" oninput="izracun()" class="minjac" data-id="2" value="1" min="1" max="3" step="0.02">
+		</div>
+			<div class="scale space-mbot">
+				<div class="numbers-one">
+					<p class="first-number">5</p>
+				</div>
+				<div class="numbers-one">
+					<p class="second-number">10</p>
+				</div>
+				<div class="numbers-one">
+					<p class="third-number">15</p>
+				</div>
+				<div class="numbers-one">
+					<p class="fourth-number">20</p>
+				</div>
+			</div>
+			<div class="clear"></div>
 		
+		
+		<div>
+			<h3 class="input-title">Dob bolesnika (godine)</h3>
+				<span class="step skriven"></span>
+				<input class="okvir hb3" type="number" name="godine" value="20" min="20" max="80" placeholder="">
+				<input type="range" oninput="izracun()" class="minjac" data-id="3" value="1" min="1" max="3" step="0.0333333333">
+		</div>
+			<div class="scale space-mbot">
+				<div class="numbers-one">
+					<p class="first-number">20</p>
+				</div>
+				<div class="numbers-one">
+					<p class="second-number">40</p>
+				</div>
+				<div class="numbers-one">
+					<p class="third-number">60</p>
+				</div>
+				<div class="numbers-one">
+					<p class="fourth-number">80</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		
+		
+		<div>
+		<h3 class="input-title">Postojanje drugih komorbiditeta</h3>
+			<span class="step skriven"></span>
+			    <div class="select hb4">  
+					<select class="okvir">
+						<option value="ne postoje">ne postoje</option>
+						<option value="nekoliko ili umjereni">nekoliko ili umjereni</option>
+						<option value="multipli ili ozbiljni">multipli ili ozbiljni</option>
+					</select>
+				</div>
+			<input type="range" oninput="izracun()" class="minjac" data-id="4" value="1" min="1" max="3" step="0.1">
+		</div>
+			<div class="scale space-mbot">
+				<div class="numbers">
+					<p>1</p>
+				</div>
+				<div class="numbers">
+					<p>2</p>
+				</div>
+				<div class="numbers">
+					<p>3</p>
+				</div>
+				<div class="numbers">
+					<p>4</p>
+				</div>
+				<div class="numbers">
+					<p>5</p>
+				</div>
+				<div class="numbers">
+					<p>6</p>
+				</div>
+				<div class="numbers">
+					<p>7</p>
+				</div>
+				<div class="numbers">
+					<p>8</p>
+				</div>
+				<div class="numbers">
+					<p>9</p>
+				</div>
+				<div class="numbers">
+					<p>10</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+		
+
+		<div>
+			<h3 class="input-title">Postojanje vaskularnih komplikacija</h3>
+			<span class="step skriven"></span>
+				<div class="select hb5">  
+					<select class="okvir">
+						<option value="ne postoje">ne postoje</option>
+						<option value="rane">rane</option>
+						<option value="uznapredovale">uznapredovale</option>
+					</select>
+				</div>
+			<input type="range" oninput="izracun()" class="minjac" data-id="5" value="1" min="1" max="3" step="0.1">
+		</div>
+			<div class="scale space-mbot">
+				<div class="numbers">
+					<p>1</p>
+				</div>
+				<div class="numbers">
+					<p>2</p>
+				</div>
+				<div class="numbers">
+					<p>3</p>
+				</div>
+				<div class="numbers">
+					<p>4</p>
+				</div>
+				<div class="numbers">
+					<p>5</p>
+				</div>
+				<div class="numbers">
+					<p>6</p>
+				</div>
+				<div class="numbers">
+					<p>7</p>
+				</div>
+				<div class="numbers">
+					<p>8</p>
+				</div>
+				<div class="numbers">
+					<p>9</p>
+				</div>
+				<div class="numbers">
+					<p>10</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		
+
+		<div>
+			<h3 class="input-title">Psihičko, socijalno i fizičko stanje bolesnika</h3>
+			<span class="step skriven"></span>
+			    <div class="select hb6">  
+					<select class="okvir">
+						<option value="visokomotivirani">visokomotivirani</option>
+						<option value="suradljivi">suradljivi</option>
+						<option value="samostalni">samostalni</option>
+						<option value="niskomotivirani">niskomotivirani</option>
+						<option value="nesuradljivi">nesuradljivi</option>
+						<option value="ovisni o pomoći drugih">ovisni o pomoći drugih</option>
+					</select>
+				</div>
+			<input type="range" oninput="izracun()" class="minjac" data-id="6" value="1" min="1" max="3" step="0.1">
+		</div>
+		<div class="scale space-mbot">
+				<div class="numbers">
+					<p>1</p>
+				</div>
+				<div class="numbers">
+					<p>2</p>
+				</div>
+				<div class="numbers">
+					<p>3</p>
+				</div>
+				<div class="numbers">
+					<p>4</p>
+				</div>
+				<div class="numbers">
+					<p>5</p>
+				</div>
+				<div class="numbers">
+					<p>6</p>
+				</div>
+				<div class="numbers">
+					<p>7</p>
+				</div>
+				<div class="numbers">
+					<p>8</p>
+				</div>
+				<div class="numbers">
+					<p>9</p>
+				</div>
+				<div class="numbers">
+					<p>10</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		
+				
+		<div>
+			<h3 class="input-title">Podrška zdravstvenog sustava/obitelji/zajednice</h3>
+			<span class="step skriven"></span>
+				<div class="select hb7">  
+					<select class="okvir">
+						<option value="sveobuhvatna">sveobuhvatna</option>
+						<option value="ograničena">ograničena</option>
+					</select>
+				</div>
+			<input type="range" oninput="izracun()" class="minjac" data-id="7" value="1" min="1" max="3" step="0.1">
+		</div>
+			<div class="scale space-mbot">
+				<div class="numbers">
+					<p>1</p>
+				</div>
+				<div class="numbers">
+					<p>2</p>
+				</div>
+				<div class="numbers">
+					<p>3</p>
+				</div>
+				<div class="numbers">
+					<p>4</p>
+				</div>
+				<div class="numbers">
+					<p>5</p>
+				</div>
+				<div class="numbers">
+					<p>6</p>
+				</div>
+				<div class="numbers">
+					<p>7</p>
+				</div>
+				<div class="numbers">
+					<p>8</p>
+				</div>
+				<div class="numbers">
+					<p>9</p>
+				</div>
+				<div class="numbers">
+					<p>10</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		
+
+	<!-- modal window - hba1c rezultat-->
+		<div class="izracunaj habece">
+			<a href="#popup1"><span class="step background">
+				Izračunaj!
+			</span></a>
+		</div>
+
+
+	
+	<!--end of modal vindow-->
 	</main>
+	<!-- END OD hBa1c KALKULATOR-->
+		
 
+
+
+
+<!-- eGFR KALKULATOR -->
+
+<main class="content-main kalkulator2" style="display: none;">
+
+	<div class="egfr egfr40">
+		<h2 class="main-title">eGFR kalkulator</h2>
+	</div>
+
+<div class="minvisina">
+	<div class="egfr">
+		<h3 class="input-title">Spol</h3>
+			<label class="switch">
+			  <input type="checkbox" class="gfr-spol">
+			  <div class="slider round">
+			  	<div class="left c6 text-center space-top">muško</div>
+			  	<div class="left c6 text-center space-top">žensko</div>
+			  	<div class="clear"></div>
+			  </div>
+			</label>
+	</div>
+
+	<script>
+	$(function(){
+		$('.ferero').click(function(){
+			var re=0;
+			var spol, dob, tezina, kreatinin, reza;
+			dob=$('.gfr-godine').val();
+			console.log(dob);
+			tezina=$('.gfr-tezina').val();
+			console.log(tezina);
+			kreatinin=$('.grf-kreatinin').val();
+			console.log(kreatinin);
+			if(dob>0&&tezina>0&&kreatinin>0){
+				//rez=(40–dob)*tezina/(72*kreatinin);
+				re=(140-dob)*tezina/(72*kreatinin);
+				if($('.gfr-spol:checked').length>0)re=re*0.85;
+				re=''+parseFloat(Math.round(re * 100) / 100).toFixed(2)
+				reza='<div class="popup"><h2>Cockcroft i Gault formula:</h2><a class="close" href="#">&times;</a><div><p><span class="reza2">'+re+'</span> ml/min</p><p><a href="javascript:bopanje('+re+')" class="link">Doziranje antidijabetika prema bubrežnoj funkciji</a></p></div></div>';
+			}else{
+				reza='<div class="popup"><h2>Morate unijeti sve vrijednosti!</h2><a class="close" href="#">&times;</a></div>';
+			}
+			$('#popup2').html(reza);
+		});
+	});
+	</script>
+
+	
+		<div class="egfr">
+			<h3 class="input-title">Dob bolesnika (godine)</h3>
+				<span class="step skriven"></span>
+				<input class="okvir gfr-godine" type="number" placeholder="unesite broj">
+				<!--<input type="range" oninput="izracun()" class="minjac" data-id="3" value="1" min="1" max="3" step="0.0333333333">-->
+		</div>
+		<!--	<div class="scale space-mbot">
+				<div class="numbers-one">
+					<p>20</p>
+				</div>
+				<div class="numbers-one">
+					<p>40</p>
+				</div>
+				<div class="numbers-one">
+					<p>60</p>
+				</div>
+				<div class="numbers-one">
+					<p>80</p>
+				</div>
+			</div> 
+			<div class="clear"></div>-->
+
+		<div class="egfr">
+			<h3 class="input-title">Masa bolesnika (kg)</h3>
+			<span class="step skriven"></span>
+			<input class="okvir gfr-tezina" type="number" placeholder="unesite broj">
+			<!--<input type="range" oninput="izracun()" class="minjac" data-id="3" value="1" min="1" max="3" step="0.0333333333">-->
+		</div>
+		<!--<div class="scale space-mbot">
+				<div class="numbers-two">
+					<p>40</p>
+				</div>
+				<div class="numbers-two">
+					<p>60</p>
+				</div>
+				<div class="numbers-two">
+					<p>80</p>
+				</div>
+				<div class="numbers-two">
+					<p>100</p>
+				</div>
+				<div class="numbers-two">
+					<p>120</p>
+				</div>
+			</div>
+			<div class="clear"></div>-->
+
+
+	<!--	<div>
+			<h3 class="input-title">Visina bolesnika (godine)</h3>
+			<span class="step skriven"></span>
+			<input class="okvir gfr-visina" type="number" name="visina" value="150" min="120" max="230">
+			<input type="range" oninput="izracun()" class="minjac" data-id="4" value="1" min="1" max="3" step="0.0333333333">
+		</div>-->
+		<!--
+		<div class="scale space-mbot">
+				<div class="numbers-two">
+					<p>130</p>
+				</div>
+				<div class="numbers-two">
+					<p>150</p>
+				</div>
+				<div class="numbers-two">
+					<p>170</p>
+				</div>
+				<div class="numbers-two">
+					<p>190</p>
+				</div>
+				<div class="numbers-two">
+					<p>210</p>
+				</div>
+			</div>
+			<div class="clear"></div>-->
+
+
+		<div class="egfr">
+			<h3 class="input-title">Kreatinin iz seruma (mg/dL)</h3>
+			<span class="step skriven"></span>
+			<input class="okvir grf-kreatinin" type="number" placeholder="unesite broj">
+	<!--		<input type="range" oninput="izracun()" class="minjac" data-id="4" value="1" min="1" max="3" step="0.0333333333">-->
+		</div>
+		<!--
+		<div class="scale space-mbot">
+				<div class="numbers-one">
+					<p>60</p>
+				</div>
+				<div class="numbers-one">
+					<p>80</p>
+				</div>
+				<div class="numbers-one">
+					<p>100</p>
+				</div>
+				<div class="numbers-one">
+					<p>120</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+-->
+
+
+<!-- modal window - eGFR rezultat-->
+		<div class="izracunaj ferero egfr">
+			<a href="#popup2"><span class="step background">
+				Izračunaj!
+			</span></a>
+		</div>
+
+</div>
+	</main>
+ <!-- END OD eGFR KALKULATOR-->
+
+
+ <!-- html reza eGFR -->
+
+ <main class="content-main tablica2" style="display: block;">
+ </main>
+
+
+
+	<!-- pocetak info-a -->
 	<!-- Obavezno koristiti DISPLAY FLEX jer block ce resetirat flex i UJEBAT TI LAJOUT !!! -->
 	<main class="content-main content-info" style="display: none;">
 		
 		<div class="info-centering">
 
-			<h3 class="info-title">Ova znanstvena aplikacija izračunava ciljanu vrijednost HbA1c pacijenta na temelju ovih 7 parametara: </h3>
+			<h4 class="info-small-title">
+				Glikirani hemoglobin (HbA1c) je zlatni standard u procjeni regulacije šećerne bolesti i procjeni rizika nastanka kroničnih komplikacija.<br>
+				U proteklih 20 godina ciljne vrijednosti HbA1c su se mijenjale, a od 2012. godine  u svim smjernicama prihvaćen je individualni pristup pri određivanju ciljnih vrijednosti glikemije.
+			</h4>
+			<h4 class="info-title">
+				Ova aplikacija pomaže Vam u izračunavanju ciljnih vrijednosti HbA1c uzimajući u obzir:
+			</h4>
 
 			<ul class="info-lista">
-				<li>Rizici nastajanja hipoglikemije i drugih nuspojava</li>
-				<li>Trajanje bolesti (godine)</li>
-				<li>Dob bolesnika</li>
-				<li>Postojanje drugih komorbiditeta</li>
-				<li>Postojanje vaskularnih komplikacija</li>
-				<li>Psihičko, socijalno i fizičko stanje bolesnika</li>
-				<li>Podrška zdravstvenog sustava / obitelji / zajednice</li>
+				<li>• rizici nastajanja hipoglikemije i drugih nuspojava</li>
+				<li>• trajanje bolesti</li>
+				<li>• dob bolesnika</li>
+				<li>• postojanje drugih komorbiditeta</li>
+				<li>• postojanje vaskularnih komplikacija</li>
+				<li>• psihičko, socijalno i fizičko stanje bolesnika</li>
+				<li>• podrška zdravstvenog sustava, obitelji, zajednice</li>
 			</ul>
 
-			<h3 class="info-title">Ovaj izračun se temelji prema: </h3>
+			<p class="info-small-title">
+				Izrađena je prema <a href="HR-smjernice-DM2-2016.pdf" target="_blank">Hrvatskim smjernicama za farmakološko liječenje šećerne
+				bolesti tipa 2</a> te je odobrena od strane Upravnog odbora Hrvatskog
+				Društva za dijabetes i bolesti metabolizma Hrvatskog liječničkog zbora.
+			</p>
+			<h3 class="info-small-title">
+				D. Rahelić i sur. Hrvatske smjernice za farmakološko liječenje šećerne bolesti tipa 2,
+				Liječ Vjesn 2016; godište 138.
+			</h3>
+			<h3 class="info-small-title">
+			Za aplikaciju i navedene informacije odgovara kompanija Takeda.
+			</h3>
+			<h5>
+				HR/ALO/1702/0001<br>
+Datum pripreme: veljača 2017.<br>
+Samo za zdravstvene djelatnike.<br>
+			</h5>
 
-			<h4 class="info-small-title">Hrvatskim smjernicama za farmakološko liječenje šećerne bolesti tipa 2</h4>
-			<p class="info-tekst">Dario Rahelić, Liječnički Vjensik 2016; Godište 138, S1-S21.</p>
-
-			<h4 class="info-small-title">Smjernicama Američke udruge za dijabetes (ADA)</h4>
-			<p>Silvio E. Inzucchi, Glycemic Targets. Diabetes Care Volume 39, Supplement 1, January 2016: S39-S46.</p>
-
-			<h4 class="info-small-title">radu Avivit Cahna i suradnika</h4>
-			<p class="info-tekst">Avivit Cahn, Clinical Assessment of Individualized Glycemic Goals in Patients With Type 2 Diabetes:</p>
-			<p class="info-tekst">Formulation of an Algorithm Based on a Survey Among Leading</p>
-			<p class="info-tekst">Worldwide Diabetologists. Diabetes Care Publish Ahead of Print,published online October 30, 2015.</p>
+			
 
 			<img class="info-logo img-centered img-responsive" src="images/takeda.png" alt="Takeda logo">
 		</div>
 
 	</main>
+	<!-- end of info -->
+
+
+
+<!-- scroll down -->
+<section id="section07" class="demo">
+	<a href="#section08"><span></span><span></span><span></span></a>
+</section>
+
+
+
+
+
+
 
 
 	<footer class="footer-main">
 		<p class="footer-copyright-text">&copy; Takeda 2016.</p>
 	</footer>
 </div>
+
+
+<div id="popup1" class="overlay">
+		<div class="popup">
+			<h2>Ciljni HbA1C</h2>
+				<a class="close" href="#">&times;</a>
+				<div>
+					<p><span class="reza"></span> %</p>
+					<p><span class="reza-mslova"></span> mmol/mol</p>
+					<!-- <p><a href="HR-smjernice-DM2-2016.pdf" target="_blank" class="link">Hrvatske smjernice za farmakološko liječenje šećerne
+				bolesti tipa 2</a> </p> -->
+				</div>
+		</div>
+	</div>
+	
+<div id="popup2" class="overlay">
+		<div class="popup">
+			<h2>&nbsp</h2>
+				<a class="close" href="#">&times;</a>
+				<div>
+					<p><span class="reza">&nbsp</span></p>
+					<p><span class="reza-mslova"></span></p>
+					<p><a href="HR-smjernice-DM2-2016.pdf" target="_blank" class="link">&nbsp</a> </p>
+				</div>
+		</div>
+	</div>
+
 
 <script>
 /* varijable */
@@ -161,74 +746,149 @@ function izracun(){
 	});
 
 	rezultata=parseFloat(Math.round(100*(6+(suma-100)/100))/100).toFixed(2);
+	rezultata2=ConvertOLD(rezultata);
 
 	$('.reza').html(rezultata); 
+	$('.reza-mslova').html(rezultata2); 
 }
+
+$(function(){
+	$('.habece').click(function(){
+		izracun();
+	});
+});
+
+
+/* ručno unošenje vrijednosti */
+var zastita=0;
+$(function(){
+	$("input[type='number']").on("click", function () {
+	   $(this).val('');
+	   zastita=1;
+	});
+	$('.okvir').on('keyup', function(){
+		vr=$(this).val();
+		teg=$(this).siblings('input[type=range]');
+		if($(this).hasClass('hb2'))vr=((vr-5)/(15/2) + 1);
+		if($(this).hasClass('hb3'))vr=((vr-20)/(60/2)+1);
+		teg.val(vr).change();
+		console.log(vr);
+	});
+	$('.kalkulator1 .select li').click(function(){
+		vrijedJ=2;
+		lengt=$(this).parent().children('li').length-1;
+		aktiv=$(this).parent().children('li').index(this);
+		vrijedJ=2*aktiv/lengt+1;
+		console.log(vrijedJ);
+		$(this).parent().parent().parent().children('input[type=range]').val(vrijedJ).change();
+	});
+});
 
 /* ispisivanje tamo nekamo */
 
 function ispis(id, val){
-	switch(id){
-		case 1:
-			var pp=['','nizak','umjeren','visok'];
-			var indeks=2;
-			if(val<1.7)indeks=1;
-			if(val>2.5)indeks=3;
-			$('.step:eq(0)').html(pp[indeks]);
-		break;
-		case 2:
-			$('.step:eq(1)').html(Math.round(15*(val-1)/2+5));
-		break;
-		case 3:
-			$('.step:eq(2)').html(Math.round(60*(val-1)/2+20));
-		break;
-		case 4:
-			var pp=['','ne postoje','nekoliko ili umjereni','multipli ili ozbiljni'];
-			var indeks=2;
-			if(val<1.7)indeks=1;
-			if(val>2.5)indeks=3;
-			$('.step:eq(3)').html(pp[indeks]);
-		break;
-		case 5:
-			var pp=['','ne postoje','rane','uznapredovale'];
-			var indeks=2;
-			if(val<1.7)indeks=1;
-			if(val>2.5)indeks=3;
-			$('.step:eq(4)').html(pp[indeks]);
-		break;
-		case 6:
-			var pp=['','visokomotivirani, suradljivi, samostalni','niskomotivirani, nesuradljivi, ovisni o pomoći drugih'];
-			var indeks=1;
-			if(val>2)indeks=2;
-			$('.step:eq(5)').html(pp[indeks]);
-		break;
-		case 7:
-			var pp=['','sveobuhvatna','ograničena'];
-			var indeks=1;
-			if(val>2)indeks=2;
-			$('.step:eq(6)').html(pp[indeks]);
-		break;
+	if(!$('input[type=number]').is(':focus')){
+		switch(id){
+			case 1:
+				var pp=['','nizak','umjeren','visok'];
+				var indeks=2;
+				if(val<1.7)indeks=1;
+				if(val>2.5)indeks=3;
+				//$('.step:eq(0)').html(pp[indeks]);
+				$('.hb1 span').html(pp[indeks]);
+				//console.log($('.hb1').val());
+			break;
+			case 2:
+				$('.hb2').val(Math.round(15*(val-1)/2+5));
+			break;
+			case 3:
+				$('.hb3').val(Math.round(60*(val-1)/2+20));
+			break;
+			case 4:
+				var pp=['','ne postoje','nekoliko ili umjereni','multipli ili ozbiljni'];
+				var indeks=2;
+				if(val<1.7)indeks=1;
+				if(val>2.5)indeks=3;
+				$('.hb4 span').html(pp[indeks]);
+			break;
+			case 5:
+				var pp=['','ne postoje','rane','uznapredovale'];
+				var indeks=2;
+				if(val<1.7)indeks=1;
+				if(val>2.5)indeks=3;
+				$('.hb5 span').html(pp[indeks]);
+			break;
+			case 6:
+				var pp=['','visokomotivirani, suradljivi, samostalni','niskomotivirani, nesuradljivi, ovisni o pomoći drugih'];
+				var indeks=1;
+				if(val>2)indeks=2;
+				$('.hb6 span').html(pp[indeks]);
+			break;
+			case 7:
+				var pp=['','sveobuhvatna','ograničena'];
+				var indeks=1;
+				if(val>2)indeks=2;
+				$('.hb7 span').html(pp[indeks]);
+			break;
+		}
 	}
+}
+
+/* UKRADENI KOD sa http://www.nps.org.au/__data/assets/js_file/0010/182287/hba1cConverterTool.js ZA KONVERZIJU JEDINICA */
+
+function ConvertOLD(oldvalue)
+{
+  var newvalue = parseFloat((10.93*oldvalue)-23.5).toFixed(4); // calculate to 3 decimals for precision
+  newvalue = Math.round(newvalue*Math.pow(10,0) + 0.000000001)/Math.pow(10,0); //Round to 0 decimals.  Note added small amount to overcome JavaScript issue and ensure rounding .5 UP
+
+  //remove any extra zeros and dots if required
+  newvalue = newvalue.toString().replace(/(\.[1-9]*)0+$/, "$1"); // remove trailing zeros
+  newvalue = newvalue.toString().replace(/\.$/, "");  // remove trailing dot
+  
+  /* jurica */
+  return newvalue;
 }
 
 $(function(){
 	for(x=1;x<8;x++)ispis(x,1);
 
-	
+
 
 
 	$('.lin1').on("pointerdown touchstart", function(event) {
 	  $('.content-info').css('display', 'none');
 	  $('.kalkulator1').show();
+	  $('.kalkulator2').hide();
+	  $('.tablica2').hide();
+	  $('.kalkulator1').animate({scrollTop: '0px'}, 0);
+	  setTimeout(function(){provOver(document.querySelector('.kalkulator1'));},500);
+	
+	});
+	$('.lin2').on("pointerdown touchstart", function(event) {
+	  $('.content-info').css('display', 'none');
+	  $('.kalkulator1').hide();
+	  $('.kalkulator2').show();
+	  $('.tablica2').hide();
+	  $('.kalkulator2').animate({scrollTop: '0px'}, 0);
+	  setTimeout(function(){provOver(document.querySelector('.kalkulator2'));},500);
 	});
 	$('.lin3').on("pointerdown touchstart", function(event) {
 	  $('.content-info').css('display', 'flex');
 	  $('.kalkulator1').hide();
+	  $('.kalkulator2').hide();
+	  $('.tablica2').hide();
+	  $('#menulink').hide();
 	});
 
 });
 
-
+function provOver(element){
+	if (element.offsetHeight < element.scrollHeight ||  element.offsetWidth < element.scrollWidth) {
+	    $('#section07').show();
+	} else {
+	    $('#section07').hide();
+	}
+}
 
 
 </script>
@@ -247,13 +907,286 @@ $(function(){
 
 
 
+<!-- closing modal window -->
+<script type="text/javascript">
+function modalClose() {
+    if (location.hash == '#popup1') {
+        location.hash = '';
+    }
+}
+
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        modalClose();
+    }
+});
+
+var modal = document.querySelector('#popup1');
+modal.addEventListener('click', function(e) {
+    modalClose();
+}, false);
+
+modal.children[0].addEventListener('click', function(e) {
+    e.stopPropagation();
+}, false);
+</script>
+
+
+
+<!-- When the user clicks on the button, 
+toggle between hiding and showing the dropdown content -->
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+<!-- select option -->
+
+<script type="text/javascript">
+  // Code to convert select to UL
+$('.select').each(function() {
+  var $select = $(this).find('select'),
+    $list = $('<ul />');
+  $select.find('option').each(function() {
+    $list.append('<li>' + $(this).text() + '</li>');
+  });
+  //Remove the select after the values are taken
+  $select.after($list).remove();
+
+
+  //Append Default text to show the selected
+  $(this).append('<span>select</span>')
+  var firsttxt = $(this).find('li:first-child').text();
+  $(this).find('span').text(firsttxt)
+
+  // On click show the UL
+  $(this).on('click', 'span', function(e) {
+    e.stopPropagation();
+    $(this).parent().find('ul').show();
+  });
+
+  // On select of list select the item
+  $(this).on('click', 'li', function() {
+    var gettext = $(this).text();
+    $(this).parents('.select').find('span').text(gettext);
+    $(this).parent().fadeOut();
+  });
+
+})
+
+
+// On click out hide the UL
+$(document).on('click', function() {
+  $('.select ul').fadeOut();
+});
+</script>
+
+<!-- zatvaranje padajuceg meni-a -->
+<script type="text/javascript">
+function showOrHide(zap) {
+ if (document.getElementById) {
+  var abra = document.getElementById(zap).style;
+  if (abra.display == "block") {
+   abra.display = "none";
+   } else {
+   abra.display = "block";
+  } 
+  return false;
+  } else {
+  return true;
+ }
+}
+</script>
+
+
+<script type="text/javascript">
+function Hide(zap) {
+ if (document.getElementById) {
+  var abra = document.getElementById(zap).style;
+  if (abra.display == "block") {
+   abra.display = "none";
+   }
+  return false;
+  } else {
+  return true;
+ }
+}
+</script>
+<!-- end of zatvaranje padajuceg meni-a -->
+
+
+<!-- otvaranje modal window-a-->
+<script type="text/javascript">
+function showModal(zap) {
+ if (document.getElementById) {
+  var abra = document.getElementById(zap).style;
+  if (abra.display == "block") {
+   abra.display = "none";
+   overlay.display = "block";
+   }
+  return false;
+  } else {
+  return true;
+ }
+}
+$(function(){
+	$('.container').click(function(e){
+		if($(e.target.parentElement).prop('tagName')=='A'||$(e.target).prop('tagName')=='A'){            
+        }else{
+        	Hide('menulink');
+        }
+		
+	});
+});
+
+
+
+/* SKROLANJE */
+$(function() {
+var trenutno=0;
+  $('#section07').click(function() {
+  	trenutno=trenutno+($(document).height()/2);
+        $('main').animate({
+          scrollTop: trenutno
+        }, 1000);
+        return false;
+  });
+ $('main').bind('scroll', function(e){
+  var elem = $(e.currentTarget);
+   if (elem[0].scrollHeight - elem.scrollTop() == elem.outerHeight()) {
+    $('#section07').hide();
+   }else{$('#section07').show();}
+  trenutno=elem.scrollTop();
+ });
+
+
+ 
+});
+</script>
+
+
+<!-- REZULTATI HbA1c kalkulatora dodano 10.4.2017. -->
+
+<script>
+/* vrijednosti */
+var lijek={};
+lijek['metformin']={'30':'kontraindiciran','45':'Maksimalna doza 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze.', '60':'Maksimalna doza 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze.','90':'Maksimalna doza 3000 mg.'};
+lijek['alogliptin + metformin']={'30':'Metformin kontraindiciran. Maksimalna dnevna doza alogliptina 6.25 mg.','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza alogliptina 12.5 mg.', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza alogliptina 12.5 mg.','90':'Maksimalna dnevna doza metformina 3000 mg. Maksimalna dnevna doza alogliptina 25 mg.'};
+lijek['saksagliptin + metformin ']={'30':'Metformin kontraindiciran. Saksagliptin kontraindiciran.','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza saksagliptina 2.5 mg.', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza saksagliptina 2.5 mg.','90':'Maksimalna dnevna doza metformina 3000 mg. Maksimalna dnevna doza saksagliptina 5 mg.'};
+lijek['vildagliptin + metformin']={'30':'Metformin kontraindiciran. Maksimalna dnevna doza vildagliptina 50 mg.','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza vildagliptina 50 mg.', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza vildagliptina 50 mg.','90':'Maksimalna dnevna doza metformina 3000 mg. Nije potrebna prilagodba doze vildagliptina.'};
+lijek['linagliptin + metformin']={'30':'Metformin kontraindiciran. Nije potrebna prilagodba doze linagliptina.','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Nije potrebna prilagodba doze linagliptina.', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Nije potrebna prilagodba doze linagliptina.','90':'Maksimalna dnevna doza metformina 3000 mg. Nije potrebna prilagodba doze linagliptina.'};
+lijek['empagliflozin + metformin']={'30':'Ne preporučuje se primjena empagliflozina.','45':'Početna doza je najviše polovina maksimalne dnevne doze. Ne preporučuje se primjena empagliflozina', '60':'Ne uvoditi terapiju empagliflozinom. Ukoliko je pacijent već na terapiji empagliflozinom, dnevnu dozu ograničiti na 10 mg.  ','90':'Maksimalna dnevna doza empagliflozina 25 mg. '};
+lijek['kanagliflozin + metformin']={'30':'Metformin kontraindiciran. Kanagliflozin nije ispitivan u bolesnika sa teškim zatajenjem bubrega. ','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Ne smije se primijeniti kanagliflozin.', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Ne uvoditi terapiju kanagliflozinom. Ukoliko je pacijent već na terapiji kanagliflozinom, dnevnu dozu ograničiti na 100 mg.  ','90':'Maksimalna dnevna doza metformina 3000 mg. Maksimalna dnevna doza kanagliflozina 300 mg.'};
+lijek['pioglitazon + metformin']={'30':'Metformin kontraindiciran. Nije potrebna prilagodba doze pioglitazona. Maksimalna dnevna doza 45 mg. ','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Nije potrebna prilagodba doze pioglitazona. Maksimalna dnevna doza 45 mg. ', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Nije potrebna prilagodba doze pioglitazona. Maksimalna dnevna doza 45 mg. ','90':'Maksimalna dnevna doza metformina 3000 mg. Nije potrebna prilagodba doze pioglitazona. Maksimalna dnevna doza 45 mg. '};
+
+
+lijek['gliklazid']={'30':'kontraindiciran','90':'Nije potrebna prilagodba doze, ali je potreban pojačan nadzor bolesnika.'};
+lijek['glimepirid']={'30':'kontraindiciran ','90':''};
+lijek['glibenklamid']={'30':'kontraindiciran ','90':'Potrebne su češće kontrole glukoze u krvi i prilagodba doze.'};
+lijek['glibenklamid mikrokristalični']={'30':'kontraindiciran ','90':'Potrebne su češće kontrole glukoze u krvi i prilagodba doze.'};
+lijek['glikvidon']={'30':'Preporučuje se oprez.','90':'Nije potrebna prilagodba doze.'};
+lijek['liraglutid']={'30':'Ne preporučuje se primjena lijeka.','90':'Nije potrebna prilagodba doze.'};
+lijek['liksisenatid']={'30':'Ne preporučuje se primjena lijeka.','90':'Nije potrebna prilagodba doze.'};
+
+lijek['eksenatid']={'30':'Ne preporučuje se primjena lijeka.','50':'Potreban je oprez kod povećanja doze sa 5 mg na 10 mg.', '101':'Nije potrebna prilagodba doze.'};
+lijek['eksenatid produljenog djelovanja']={'30':'Ne preporučuje se primjena lijeka.','50':'Ne preporučuje se primjena lijeka.', '101':'Nije potrebna prilagodba doze.'};
+lijek['alogliptin']={'30':'Maksimalna dnevna doza 6.25 mg.','50':'Maksimalna dnevna doza 12.5 mg.', '101':'Nije potrebna prilagodba doze.'};
+lijek['sitagliptin']={'30':'Maksimalna dnevna doza 25 mg.','50':'Maksimalna dnevna doza 50 mg.', '101':'Nije potrebna prilagodba doze.'};
+lijek['pioglitazon + alogliptin']={'30':'Ne preporučuje se primjena lijeka.','50':'Maksimalna dnevna doza alogliptina 12.5 mg. Nije potrebna prilagodba doze pioglitazona. ', '101':'Nije potrebna prilagodba doze.'};
+
+
+
+lijek['empagliflozin']={'15':'Ne primjenjivati lijek.','45':'Ukoliko tijekom terapije empagliflozinom dođe do trajnog smanjenja CrCl < 45 ml/min, prekinuti terapiju. ', '60':'Ne uvoditi terapiju empagliflozinom. Ukoliko tijekom terapije empagliflozinom dođe do trajnog smanjenja CrCl < 60 ml/min, ograničiti dozu lijeka na 10 mg dnevno.','101':'Nije potrebna prilagodba doze.'};
+lijek['kanagliflozin']={'15':'Ne primjenjivati lijek.','45':'Ukoliko tijekom terapije kanagliflozinom dođe do trajnog smanjenja CrCl < 45 ml/min, prekinuti terapiju.', '60':'Ne uvoditi terapiju kanagliflozinom. Ukoliko tijekom terapije kanagliflozinom dođe do trajnog smanjenja CrCl < 60 ml/min, ograničiti dozu lijeka na 100 mg dnevno.','101':'Nije potrebna prilagodba doze'};
+lijek['dapagliflozin']={'15':'Ne preporučuje se primjena lijeka.','45':'Ne preporučuje se primjena lijeka.', '60':'Ne preporučuje se primjena lijeka.','101':'Nije potrebna prilagodba doze.'};
+
+
+lijek['vildagliptin']={'50':'Maksimalna dnevna doza 50 mg','101':'Nije potrebna prilagodba doze.'};
 
 
 
 
 
+lijek['saksagliptin']={'15':'Ne preporučuje se primjena lijeka.','60':'Maksimalna dnevna doza 2.5 mg.', '101':'Nije potrebna prilagodba doze.'};
 
 
+
+
+lijek['dapagliflozin + metformin']={'30':'Lijek je kontraindiciran.','60':'Ne preporučuje se primjena lijeka.', '90':'Nije potrebna prilagodba doze. Maksimalna dnevna doza metformina 3000 mg.'};
+
+
+
+
+lijek['akarboza']={'25':'kontraindiciran'};
+
+
+
+
+lijek['glibenklamid + metformin']={'60':'Lijek kontraindiciran.','90':'Preporučuje se povećan nadzor pacijenta. '};
+
+lijek['saksagliptin + dapagliflozin']={'60':'Ne preporučuje se primjena lijeka.','90':'Nije potrebna prilagodba doze.'};
+
+
+
+lijek['sitagliptin + metformin']={'30':'Metformin kontraindiciran. Maksimalna dnevna doza sitagliptina 25 mg.','45':'Maksimalna dnevna doza metformina 1000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza sitagliptina 50 mg.', '50':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza sitagliptina 50 mg.', '60':'Maksimalna dnevna doza metformina 2000 mg. Početna doza je najviše polovina maksimalne dnevne doze. Maksimalna dnevna doza sitagliptina 100 mg.','90':'Maksimalna dnevna doza metformina 3000 mg. Maksimalna dnevna doza sitagliptina 100 mg.'};
+
+
+/* kraj vrijednosti*/
+
+/*
+egrfica loop lijekova: 
+<tr>
+<td width="30%-1px" class="rcrta val-top">
+Ime lijeka
+</td>
+<td width="60%">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio tellus. Sed in nisl in nunc laoreet auctor nec viverra dui. Donec eu lacinia est, pharetra tristique felis. Etiam metus velit, eleifend at ipsum sed, cursus hendrerit justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</td>
+</tr>
+<tr><td width="30%-1px" class="rcrta val-top">iii</td><td width="60%">oooo</td></tr>
+
+*/
+
+
+ 	var tekst1='<tr><td width="30%-1px" class="rcrta val-top">', tekst2='</td><td width="60%">', tekst3='</td></tr>';
+ 	var bopanje=function(egfrca){
+ 		location.hash = ''; /* ovo miče modal */
+ 		tekst='<tr><td  width="30%-1px" class="bcrta rcrta">Lijek</td><td width="60%" class="bcrta">Doziranje prilagođeno klirensu kreatinina "RJEŠENJE" ml/min</td></tr>';
+ 		$.each(lijek, function(lijek, data){
+ 			teksta='';
+ 			$.each(data, function(gfr, opis){
+ 				if(parseFloat(egfrca)<parseFloat(gfr)){ /* ako je naš upis manji od keya, znači da ga upisujemo*/
+ 					teksta=tekst1+lijek+tekst2+opis+tekst3;
+ 					return false; /*a ako je upisan, znači da brejkamo loop kako ga sljedeći nebi pojeo*/
+ 				}
+ 			});
+			tekst=tekst+teksta;
+ 		});
+ 		$('.tablica2').html(tekst);
+ 		$('.kalkulator2').hide();
+	    $('.tablica2').show();
+ 		return false;
+ 	}
+
+</script>
 
 
 </body>
