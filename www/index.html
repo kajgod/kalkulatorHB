@@ -658,8 +658,8 @@ $(function(){
 			</ul>
 
 			<p class="info-small-title">
-				Izrađena je prema <span onclick="otvorismjer();">Hrvatskim smjernicama za farmakološko liječenje šećerne
-				bolesti tipa 2</span> te je odobrena od strane Upravnog odbora Hrvatskog
+				Izrađena je prema <a href="#" onclick="otvorismjer();">Hrvatskim smjernicama za farmakološko liječenje šećerne
+				bolesti tipa 2</a> te je odobrena od strane Upravnog odbora Hrvatskog
 				Društva za dijabetes i bolesti metabolizma Hrvatskog liječničkog zbora.
 			</p>
 			<h3 class="info-small-title">
@@ -684,6 +684,7 @@ Samo za zdravstvene djelatnike.<br>
 	<!-- end of info -->
 <script>
 	function otvorismjer(){
+		alert('1');
 		cordova.plugins.fileOpener2.open(
 		    '/sdcard/Download/HR-smjernice-DM2-2016.pdf',
 		    'application/pdf', 
@@ -696,6 +697,7 @@ Samo za zdravstvene djelatnike.<br>
 		        }
 		    }
 		);
+		alert('2');
 	}
 
 </script>
