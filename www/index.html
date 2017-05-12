@@ -41,7 +41,9 @@
 	
 	
 <script>
-	document.addEventListener("deviceready", function(){alert('redi');}, false);
+	document.addEventListener("deviceready", function(){
+
+	}, false);
 </script>
 
 </head>
@@ -664,8 +666,6 @@ $(function(){
 
 			<p class="info-small-title">
 				Izrađena je prema <a href="#" onclick="otvorismjer();">Hrvatskim smjernicama za farmakološko liječenje šećerne
-				bolesti tipa 2</a> <a href="#" onclick="otvorismjer2();">Hrvatskim smjernicama za farmakološko liječenje šećerne
-				bolesti tipa 2</a> <a href="#" onclick="otvorismjer3();">Hrvatskim smjernicama za farmakološko liječenje šećerne
 				bolesti tipa 2</a> te je odobrena od strane Upravnog odbora Hrvatskog
 				Društva za dijabetes i bolesti metabolizma Hrvatskog liječničkog zbora.
 			</p>
@@ -690,31 +690,20 @@ Samo za zdravstvene djelatnike.<br>
 	</main>
 	<!-- end of info -->
 <script>
-	function otvorismjer(){
-		alert('1');
-		
+	function otvorismjer(){		
 		cordova.plugins.fileOpener2.open(
 		    '/sdcard/Download/HR-smjernice-DM2-2016.pdf',
 		    'application/pdf'
 		);
-		alert('2');
 	}
 
-	function otvorismjer2(){
-		alert('1');
-		
+	function otvorismjer2(){		
 		window.open('http://dedal.hr/takeda/pdf/HR-smjernice-DM2-2016.pdf', '_system', 'location=yes');
-
-		alert('2');
 	}
 
-	function otvorismjer3(){
-		alert('1');
-		
+	/*function otvorismjer3(){
 		window.open('HR-smjernice-DM2-2016.pdf', '_system', 'location=yes');
-
-		alert('2');
-	}
+	}*/
 
 
 
