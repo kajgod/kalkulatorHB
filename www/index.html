@@ -658,7 +658,7 @@ $(function(){
 			</ul>
 
 			<p class="info-small-title">
-				Izrađena je prema <a href="#" target="_blank" onclick="window.open(encodeURI('http://dedal.hr/takeda/pdf/HR-smjernice-DM2-2016.pdf'), '_blank');alert(encodeURI('http://dedal.hr/takeda/pdf/HR-smjernice-DM2-2016.pdf'));return false;">Hrvatskim smjernicama za farmakološko liječenje šećerne
+				Izrađena je prema <a href="#" target="_blank" onclick="otvorismjer();">Hrvatskim smjernicama za farmakološko liječenje šećerne
 				bolesti tipa 2</a> te je odobrena od strane Upravnog odbora Hrvatskog
 				Društva za dijabetes i bolesti metabolizma Hrvatskog liječničkog zbora.
 			</p>
@@ -682,7 +682,23 @@ Samo za zdravstvene djelatnike.<br>
 
 	</main>
 	<!-- end of info -->
+<script>
+	function otvorismjer(){
+		cordova.plugins.fileOpener2.open(
+		    '/sdcard/Download/HR-smjernice-DM2-2016.pdf', // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf
+		    'application/pdf', 
+		    { 
+		        error : function(e) { 
+		            alert('Error status: ' + e.status + ' - Error message: ' + e.message);
+		        },
+		        success : function () {
+		            alert('file opened successfully');                
+		        }
+		    }
+		);
+	}
 
+</script>
 
 
 <!-- scroll down -->
