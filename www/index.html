@@ -658,8 +658,8 @@ $(function(){
 			</ul>
 
 			<p class="info-small-title">
-				Izrađena je prema <a href="#" target="_blank" onclick="otvorismjer();">Hrvatskim smjernicama za farmakološko liječenje šećerne
-				bolesti tipa 2</a> te je odobrena od strane Upravnog odbora Hrvatskog
+				Izrađena je prema <span onclick="otvorismjer();">Hrvatskim smjernicama za farmakološko liječenje šećerne
+				bolesti tipa 2</span> te je odobrena od strane Upravnog odbora Hrvatskog
 				Društva za dijabetes i bolesti metabolizma Hrvatskog liječničkog zbora.
 			</p>
 			<h3 class="info-small-title">
@@ -685,7 +685,7 @@ Samo za zdravstvene djelatnike.<br>
 <script>
 	function otvorismjer(){
 		cordova.plugins.fileOpener2.open(
-		    '/sdcard/Download/HR-smjernice-DM2-2016.pdf', // You can also use a Cordova-style file uri: cdvfile://localhost/persistent/Download/starwars.pdf
+		    '/sdcard/Download/HR-smjernice-DM2-2016.pdf',
 		    'application/pdf', 
 		    { 
 		        error : function(e) { 
