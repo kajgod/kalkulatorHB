@@ -685,17 +685,10 @@ Samo za zdravstvene djelatnike.<br>
 <script>
 	function otvorismjer(){
 		alert('1');
+		alert(typeof cordova.plugin.fileOpener2);
 		cordova.plugins.fileOpener2.open(
 		    '/sdcard/Download/HR-smjernice-DM2-2016.pdf',
-		    'application/pdf', 
-		    { 
-		        error : function(e) { 
-		            alert('Error status: ' + e.status + ' - Error message: ' + e.message);
-		        },
-		        success : function () {
-		            alert('file opened successfully');                
-		        }
-		    }
+		    'application/pdf'
 		);
 		alert('2');
 	}
